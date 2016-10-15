@@ -4,6 +4,7 @@
  * Contributing Author: Tyler Smith
  */
 ;
+var jQuery = require('jquery');
 (function ($) {
 
   var focused = true;
