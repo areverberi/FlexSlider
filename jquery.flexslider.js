@@ -3,10 +3,9 @@
  * Copyright 2012 WooThemes
  * Contributing Author: Tyler Smith
  */
-;
-var jQuery = require('jquery');
-(function ($) {
 
+var jQuery = require('jquery');
+function factory($) {
   var focused = true;
 
   //FlexSlider: Object Instance
@@ -1189,4 +1188,12 @@ var jQuery = require('jquery');
       }
     }
   };
-})(jQuery);
+}
+if(typeof module === "object" && typeof module.exports === "object") {
+  factory(require("jquery"));
+}
+else {
+  (function ($) {
+    factory($);
+  })(jQuery);
+}
