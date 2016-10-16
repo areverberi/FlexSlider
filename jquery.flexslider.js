@@ -1190,7 +1190,8 @@ function factory($) {
   };
 }
 if(typeof module === "object" && typeof module.exports === "object") {
-  factory(require("jquery"));
+  // factory(require("jquery"));
+  modules.exports = factory;
 }
 else {
   (function ($) {
