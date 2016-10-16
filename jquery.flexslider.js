@@ -1191,7 +1191,7 @@ function factory($) {
 }
 if(typeof module === "object" && typeof module.exports === "object") {
   // factory(require("jquery"));
-  modules.exports = factory;
+  module.exports = factory;
 }
 else {
   (function ($) {
